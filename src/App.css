@@ -51,11 +51,19 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  font-size: 5rem;
+  font-size: 4rem; /* Adjust font-size to fit on smaller screens */
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  width: 80%;
-  max-width: 600px;
+  width: 90%; /* Increase the width percentage */
+  max-width: none; /* Remove the max-width or make it larger */
   line-height: 1.2;
+  word-wrap: break-word; /* This will break the text to prevent overflow */
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 480px) {
+  .birthday-text {
+    font-size: 3rem; /* Smaller font-size on very small screens */
+  }
 }
