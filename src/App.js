@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { useConfettiEffect, useGradientChange } from './customHooks';
+import Gallery from './Gallery';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [showGallery, setShowGallery] = useState(false);
+  const gradientIndex = useGradientChange(500);
+
+  // Activate confetti effect and schedule gallery display
+  useConfettiEffect(!showGallery, setShowGallery, 3000);
+
+  const gradients = [
+    'linear-gradient(to right, #a864fd, #29cdff)',
+    'linear-gradient(to right, #78ff44, #ff718d)',
+    'linear-gradient(to right, #fdff6a, #a864fd)',
+  ];
+
+  if (showGallery) {
+    return <Gallery />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="birthday-container">
+      <h1 className="birthday-text" style={{ backgroundImage: gradients[gradientIndex] }}>
+        To the TIMES!
+      </h1>
     </div>
   );
-}
+};
 
 export default App;
