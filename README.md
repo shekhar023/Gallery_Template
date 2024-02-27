@@ -1,6 +1,6 @@
 Instructions to add your assets to the project.
 
-Note: Everytime you add or remove an asset you need to manually run the generate the list by running the following commands.
+Note: Everytime you add or remove an asset you need to manually run the following commands, otherwise the mmodifications wont reflect on the webapp.
 
 1. Add The images you want to display in the galler into the img folder and videos to the videos folder.
 2. navigate to /src folder
