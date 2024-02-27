@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="birthday-container">
       <h2 className="birthday-text" style={{ backgroundImage: gradients[gradientIndex] }}>
-        Shoutout to the Kanpuriya times!
+        Add your opening message here
       </h2>
     </div>
   );

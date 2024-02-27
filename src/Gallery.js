@@ -40,7 +40,7 @@ const Gallery = () => {
         WebkitBackgroundClip: 'text',
         marginBottom: '40px',
       }}>
-        To the memories of Now, Then, and Future
+        Add your Message here if you want any
       </h1>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px' }}>
         {shuffledMedia.map((media, index) => (
